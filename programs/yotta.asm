@@ -1204,9 +1204,7 @@ registers:
 ; Include the control section (BASIC part) after the command section (binary 
 ; part). Contains BASIC programming but not an independent program, needs
 ; the command section and the launcher to run properly.
-; Has to have '.txt' on the end or the build script will think it is a
-; stand alone program and add it to disk.
 program_start:
-incbin 'yotta.bas.txt'
+incbin 'yotta.bas'
 program_end:
 

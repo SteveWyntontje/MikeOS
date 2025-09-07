@@ -8,7 +8,7 @@
 
 # (If you need to blank the floppy image: 'mkdosfs $mikeos_home/disk_images/mikeos.flp')
 
-mikeos_home=/home/wynto/wynto/mikeos-4.7.0
+mikeos_home=~/Projects/mikeos-4.7.0
 
 if test "`whoami`" != "root" ; then
 	echo "You must be logged in as root to build (for loopback mounting)"
@@ -61,8 +61,7 @@ mkdir tmp-loop && mount -o loop -t vfat disk_images/mikeos.flp tmp-loop && cp so
 
 cp programs/* tmp-loop
 rm tmp-loop/*.asm
-
-sleep 0.2
+rm tmp-loop/yotta.bas
 
 echo ">>> Unmounting loopback floppy..."
 
