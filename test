@@ -1,0 +1,7 @@
+#!/bin/sh
+
+# This script starts the QEMU PC emulator, booting from the
+# MikeOS floppy disk image
+
+mikeos_home="/home/wynto/wynto/mikeos-4.7.0"
+qemu-system-i386 -soundhw pcspk -drive format=raw,file=$mikeos_home/disk_images/mikeos.flp,index=0,if=floppy 2> /dev/null
